@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function comparadorDeArrays(arr1, arr2) {
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] === arr2[i]) {
+                } else{
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function memoize(fn) {
+            let argumentosMemorizados = [];
+            let respuestas = [];
+            return function(...args) {
+                for(let i = 0; i < argumentosMemorizados.length; i++){
+                    if(comparadorDeArrays(argumentosMemorizados[i],args)){
+                        return respuestas[i];
+                    }
+                }
+                let result = fn(...args);
+                argumentosMemorizados.push(args);
+                respuestas.push(result)
+                return result;
+            }
+        }
+
+        var mergeTwoLists2 = function(list1, list2) {
+            let newList = list1.concat(list2);
+            newList.sort((a,b) => (a-b))
+            return newList
+        };
+        console.log(mergeTwoLists2([1,2,4],[1,3,4,4]))
+
+        var removeDuplicates = function(nums) {
+            for(let i = 0; i < nums.length; i++){
+                if(nums[i] === nums[i+1]){
+                    nums.splice(i, 1)
+                }
+            }
+            return nums.length
+        };
+        console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+
+        var removeElement = function(nums, val) {
+            for(let i = 0; i < nums.length; i++){
+                if(nums[i] === val){
+                    nums.splice(i, 1);
+                }
+            }
+            return nums.length;
+        };
+        console.log("FEO")
+        console.log(removeElement([1,2,3,4,5,4,5,4], 4))
+
+        var majorityElement = function(nums) {
+            if(nums.length > 1){
+                nums.sort((a,b)=>(a-b))
+                return nums[Math.round(nums.length/2)]
+            }
+            return nums[0]
+        };
+
+        var isPalindrome = function(s) {
+            let sinMamadas = s.replace(/[^a-z0-9]/gi, '');
+            sinMamadas = sinMamadas.toLowerCase();
+            for(let i = 0; i < sinMamadas.length; i++){
+                if(sinMamadas[i] !== sinMamadas[sinMamadas.length-i-1]){
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        console.log(isPalindrome("race a car"))
+
+        function convertidorInt(arr){ 
+            let num = 0;
+            let contador = 1;
+            for(let i = arr.length - 1; i >= 0; i--){
+                num += arr[i]*contador;
+                contador *= 10
+            }
+            return num;
+        }
+
+        function convertidorArr(num){
+            var myArr = String(num).split("").map((num)=>{
+                return Number(num)
+            })
+            return myArr;
+        }
+
+        var plusOne = function(digits) {
+            if(digits[digits.length -1] !== 9){
+                digits[digits.length -1] += 1;
+                return digits
+            } else{
+                let entero = convertidorInt(digits);
+                entero += 1;
+                console.log(entero);
+                let array = convertidorArr(entero);
+                console.log(array)
+                return array;
+            }
+        };
+
+        console.log("No seas pendejo cabron")
+        console.log(plusOne([4,3,2,1]))
+
+        function sacarFactorial(n){
+            let factorial = 1
+            if(n === 0){
+                return 0;
+            } else{
+                for(let i = 1; i <= n; i++){
+                    factorial *= i
+                }
+                return factorial
+            }
+        }
+
+        var trailingZeroes = function(n) {
+            let m = sacarFactorial(n);
+            console.log(m)
+            let cagada = 10;
+            if(m === 0){
+                return 0
+            }
+            for(let i = 0; i < n; i++){
+                if(m % cagada === 0){
+                    cagada *= 10;
+                } else{
+                    return i
+                }
+            }
+        };
+
+        console.log(trailingZeroes(22))
+
+        let newString;
+        function quitarVocales(str){
+            let coordenadasDeVocales = [];
+            for(let i = 0; i < str.length; i++){
+                if(str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u"){
+                    coordenadasDeVocales.push([str[i],i]);
+                }
+            }
+            newString = str.replace(/a|e|i|o|u/g, "°")
+            return coordenadasDeVocales;
+        }
+
+        var reverseVowels = function(s) {
+            let sinVocales = quitarVocales(s);
+            let contadorNegro = sinVocales.length - 1;
+            for(let i = 0; i < s.length; i++){
+                if(newString[i] === "°"){
+                    newString = newString.replace("°", sinVocales[contadorNegro][0])
+                    contadorNegro --;
+                }
+            }
+        };
+
+        console.log(quitarVocales("abuelito"))
+        console.log(newString)
+        console.log(reverseVowels("me pican los cocos"))
+
+        let positionArr = [3,2,20,1,1,3]
+
+        let suma = 0
+
+        let arrayDeSumas1 = positionArr.map(function(a){
+            suma += a 
+            return suma
+        })
+        console.log(arrayDeSumas1)
+
+        suma = 0;
+        arrayInverso = positionArr.reverse();
+
+        let arrayDeSumas2 = arrayInverso.map(function(a){
+            suma += a 
+            return suma
+        })
+        console.log(arrayDeSumas2)
+
+        function isAnagram(s, t){
+            s = s.split("").sort();
+            t = t.split("").sort();
+            if(s.length !== t.length){
+                return false
+            }
+            for(let i = 0; i < s.length; i++){
+                if(s[i] !== t[i]){
+                    return false
+                }
+            }
+            return true;
+        }
+
+        var groupAnagrams = function(strs) {
+            let diccionario = [[strs[0]]];
+            for(let i = 1; i < strs.length; i++){
+                for(let j = 0; j < diccionario.length; i++){
+                    if(isAnagram(diccionario[j][0], strs[i])){
+                        diccionario[j].push(strs[i])
+                    } else if(j === diccionario.length - 1){
+                        diccionario.push([strs[i]])
+                    }
+                }
+            }
+            return diccionario;
+        };
+
+        let array = ["eat","tea","tan","ate","nat","bat"]
+        console.log(groupAnagrams(array))
+        console.log(isAnagram("eat", "tea"))
+        
+
+    </script>
+</body>
+</html>
