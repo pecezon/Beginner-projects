@@ -1,0 +1,109 @@
+body{
+    width: 100%;
+    margin: 5px, 0, 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 0 auto;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.container-proyectos{
+    margin: 0 auto;
+    width: 95%;
+    border: red 1px solid;
+}
+
+.proyecto{
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 65%;
+    border: purple 1px solid;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*Background Color Project 1*/
+#background-colors{
+    animation: backgroundcolorchange 5s infinite;
+}
+
+@keyframes backgroundcolorchange{
+    0%{
+        background-color: #219C90;
+    }
+    20%{
+        background-color: #E9B824;
+    }
+    40%{
+        background-color: #EE9322;
+    }
+    60%{
+        background-color: #D83F31;
+    }
+    80%{
+        background-color: #12486B;
+    }
+    100%{
+        background-color: #419197;
+    }
+}
+
+/*Hex Colors Project 2*/
+#hex-colors h3{
+    animation: lettercolorchange 5s infinite alternate;
+}
+
+@keyframes lettercolorchange{
+    0%{
+        color: indigo;
+    }
+    20%{
+        color: blue;
+    }
+    40%{
+        color: green;
+    }
+    60%{
+        color: yellow;
+    }
+    80%{
+        color: orange;
+    }
+    100%{
+        color: red;
+    }
+}
+
+/*Quote Generator Project 3*/
+.quote-button {
+	background-color:#12476b;
+	border-radius:27px;
+	border:3px solid #12476b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:14px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #12476b;
+}
+.quote-button:hover {
+	background-color:#419197;
+}
+.quote-button:active {
+	position:relative;
+	top:1px;
+}
