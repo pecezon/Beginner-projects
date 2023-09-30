@@ -107,3 +107,91 @@ a{
 	position:relative;
 	top:1px;
 }
+
+/*Pass the message Project 4*/
+#message-input {
+    padding: 5px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #78d6c6;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px rgba(120,214,198,.75);
+    text-shadow: 0px 0px 0px rgba(120,214,198,.0);
+}
+#message-input {
+    outline:none;
+}
+
+#message-sending-button{
+    padding: 5px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #78d6c6;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px rgba(120,214,198,.75);
+    text-shadow: 0px 0px 0px rgba(120,214,198,.0);
+}
+
+#message-sending-button:hover{
+    background-color: #419197;
+    border-color: #12476b;
+}
+
+/*Counter Project 5*/
+
+#count{
+    font-size: 5vh;
+}
+
+.counter-increase {
+	background-color:#599bb3;
+	border-radius:13px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	padding:9px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.counter-increase:hover {
+	background-color:#408c99;
+}
+.counter-increase:active {
+	position:relative;
+	top:1px;
+}
+
+.counter-reset {
+	background-color:#fe1a00;
+	border-radius:13px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	padding:9px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+    margin: 10px 0;
+}
+.counter-reset:hover {
+	background-color:#ce0100;
+}
+.counter-reset:active {
+	position:relative;
+	top:1px;
+}
+
+/*Image Carousel Project 6*/
+
+ 

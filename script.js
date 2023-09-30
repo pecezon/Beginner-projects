@@ -18,3 +18,30 @@ function generate() {
 
     console.log(authors)
 }
+
+//Pass the message page
+const messageInput = document.getElementById("message-input");
+
+messageInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        getMessage();
+    }
+})
+
+function getMessage() {
+    document.getElementById("message-output").innerHTML = messageInput.value;
+    console.log(messageInput.value)
+    messageInput.value = ""
+}
+
+//Counter
+let count = 0
+function changeCount(change) {
+    count += change
+    document.getElementById("count").innerHTML = count 
+}
+
+function reset() {
+    count = 0
+    document.getElementById("count").innerHTML = count
+}
