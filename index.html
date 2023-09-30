@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Pixelify+Sans&family=Quintessential&family=Roboto&display=swap" rel="stylesheet">
     <title>Beginner-projects from codefoxx</title>
 </head>
 <body>
@@ -17,6 +17,8 @@
             <h1>Beginner-projects from codefoxx</h1>
         </div>
     </header>
+
+
     <div class="container-proyectos">
         <div class="proyecto" id="background-colors">
             <a href="background colors/index.html">
@@ -24,16 +26,14 @@
                 <p>Just a button that generates a random color for the background of the page</p>
             </a>
         </div>
-    </div>
-    <div class="container-proyectos">
+
         <div class="proyecto"  id="hex-colors">
             <a href="hex colors/index.html">
                 <h3>Hex Colors</h3>
                 <p>Generates a random hex color and displays</p>
             </a>
         </div>
-    </div>
-    <div class="container-proyectos">
+    
         <div class="proyecto"  id="quote-generator">
             <a href="random quotes/index.html">
                 <h3>Random Quote Generator</h3>
@@ -43,18 +43,16 @@
             <p id="quote">"Kanye West is da GOAT"</p>
             <h4 id="author">― Diego López</h4>
         </div>
-    </div>
-    <div class="container-proyectos">
+
         <div class="proyecto"  id="message">
             <a href="message/index.html">
                 <h3>Pass the message site</h3>
                 <p>Displays the message you input</p>
             </a>
-            <input type="text" id="message-input"><button id="message-sending-button" onclick="getMessage()">Enviar</button>
+            <input type="text" id="message-input"><button id="message-sending-button" onclick="getMessage()">Submit</button>
             <p id="message-output">Arriba el america</p>
         </div>
-    </div>
-    <div class="container-proyectos">
+
         <div class="proyecto"  id="counter">
             <a href="counter/index.html">
                 <h3>Increase/Decrease Counter</h3>
@@ -66,26 +64,37 @@
             <br>
             <button type="button" class="counter-reset" onclick="reset()">Reset</button>   
         </div>
-    </div>
-    <div class="container-proyectos">
+
         <div class="proyecto"  id="image-carousel">
             <a href="image carousel/index.html">
                 <h3>Image Carousel</h3>
                 <p>Scroll through your all the images you want with this scratch made image carousel</p>
                 <img src="img/carousel.jpg" alt="Carousel.jpg" width="50%">
             </a>
-              
         </div>
-    </div>
-    <div class="container-proyectos">
-        <div class="proyecto"  id="image-carousel">
-            <a href="image carousel/index.html">
-                <h3>Image Carousel</h3>
-                <p>Scroll through your all the images you want with this scratch made image carousel</p>
-                <img src="img/carousel.jpg" alt="Carousel.jpg" width="50%">
+
+        <div class="proyecto"  id="digital-clock">
+            <a href="digital clock/index.html">
+                <h3>Digital Clock</h3>
+                <p>Do you need to know what hour it is? I got you</p>
+                <div class="digitalClock">
+                    <h1 id="day">MON</h1>
+                    <h1 id="hour">04</h1>
+                    <h1 id="bar1">/</h1>
+                    <h1 id="minute">20</h1>
+                    <h1 id="bar2">/</h1>
+                    <h1 id="ampm">PM</h1>
+                </div>
+            </a> 
+        </div>
+
+        <div class="proyecto"  id="calculator">
+            <a href="calculadora/index.html">
+                <h3>Calculator</h3>
+                <p>A totaly functional calculator</p>
             </a>
-              
         </div>
+
     </div>
 
     <script src="script.js"></script>
