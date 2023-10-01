@@ -74,3 +74,54 @@ function calculateTime() {
     onlyHour(hour, minute, ampm)
     setTimeout(calculateTime, 200)
 }
+
+//Calculator
+const userInput = document.getElementById("calculator-input");
+let expression = "";
+
+function equal() {
+    expression = userInput.value
+    userInput.value = eval(expression)
+    expression = eval(expression)
+}
+
+function erase() {
+    expression = ""
+    userInput.value = expression
+}
+
+//Grocery List
+const groceries = document.getElementsByClassName("groceries")[0];
+const delelteGroceriesButton = document.getElementById("grocery-list-erase");
+const allItems = document.getElementById("allItems");
+const groceryInput = document.getElementById("grocery-input");
+let state = "non-underlined"
+
+delelteGroceriesButton.addEventListener("click", function(){
+    allItems.innerHTML = ""
+})
+
+groceryInput.addEventListener("keydown", function(event){
+    if (event.key === "Enter") {
+        addItem()
+    }
+})
+
+function addItem() {
+    let h2 = document.createElement("h2")
+    h2.innerHTML = "- " + groceryInput.value
+    
+    h2.addEventListener("click", function() {
+        if(state === "non-underlined"){
+            h2.style.textDecoration = "line-through"
+            state = "underlined";
+        } else{
+            h2.style.textDecoration = "none"
+            state = "non-underlined"
+        }
+    })
+
+    allItems.insertAdjacentElement("beforeend", h2)
+
+    groceryInput.value = ""
+}

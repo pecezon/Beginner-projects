@@ -8,13 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Pixelify+Sans&family=Quintessential&family=Roboto&display=swap" rel="stylesheet">
-    <title>Beginner-projects from codefoxx</title>
+    <script src="https://kit.fontawesome.com/7c56c94f87.js" crossorigin="anonymous"></script>
+    <title>Beginner Web Projects</title>
 </head>
 <body>
     
     <header class="container">
         <div >
-            <h1>Beginner-projects from codefoxx</h1>
+            <h1>Beginner Web Projects</h1>
+            <h2>By Diego López</h2>
+            <h3>Inspired by codefoxx "25 Beginner Projects - HTML, CSS, & JavaScript"</h3>
+            <p>Made this little projects to learn HTML, CSS and JS web basics this page shows little snipets from each project, you can watch them fully by clicking on the project title</p>
         </div>
     </header>
 
@@ -30,7 +34,7 @@
         <div class="proyecto"  id="hex-colors">
             <a href="hex colors/index.html">
                 <h3>Hex Colors</h3>
-                <p>Generates a random hex color and displays</p>
+                <p>Generates a random hex color and displays it</p>
             </a>
         </div>
     
@@ -39,7 +43,7 @@
                 <h3>Random Quote Generator</h3>
                 <p>Displays a random quote from a JS hashmap</p>
             </a>
-            <a href="#" class="quote-button" onclick="generate()">Generate Quote</a>
+            <a class="quote-button" onclick="generate()">Generate Quote</a>
             <p id="quote">"Kanye West is da GOAT"</p>
             <h4 id="author">― Diego López</h4>
         </div>
@@ -93,10 +97,46 @@
                 <h3>Calculator</h3>
                 <p>A totaly functional calculator</p>
             </a>
+            <input type="text" id="calculator-input"><button id="calculator-result-button" onclick="equal()">Submit</button>
+            <br>
+            <button type="button" class="calculator-erase" onclick="erase()">Clear</button> 
+        </div>
+
+        <div class="proyecto"  id="grocery-list">
+            <a href="grocery list/index.html">
+                <h3>Grocery List</h3>
+                <p>Be always ready to go grocery shoping with this grocery list maker</p>
+            </a>
+            <div class="groceries">
+                <input id="grocery-input" type="text">
+                <button type="button" id="grocery-list-erase">Clear</button>
+                <br>
+                <div id="allItems">
+                </div>
+            </div>
+        </div>
+
+        <div class="proyecto"  id="grocery-list">
+            <a href="grocery list/index.html">
+                <h3>Grocery List</h3>
+                <p>Be always ready to go grocery shoping with this grocery list maker</p>
+            </a>
+            <div class="groceries">
+                <input id="grocery-input" type="text">
+                <button type="button" id="grocery-list-erase">Clear</button>
+                <br>
+                <div id="allItems">
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <footer>
+        <a href="https://www.linkedin.com/in/diego-lopez-magdaleno/" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/pecezon" id="github"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
