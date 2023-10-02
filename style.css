@@ -11,6 +11,11 @@ body{
     font-family: 'AR One Sans', sans-serif;
 }
 
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
 .container{
     margin: 0 auto;
     width: 100%;
@@ -31,7 +36,7 @@ body{
     margin-bottom: 5px;
     padding: 20px;
     width: 65%;
-    border: purple 1px solid;
+    border: black 3px solid;
     text-align: center;
     background-color: #e4e5e6;
 }
@@ -52,8 +57,30 @@ footer{
     align-items: center;
 }
 
-footer a{
+#iconos{
     margin: 0 auto;
+    border: #000000 1px solid;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer #iconos a{
+    margin: 25px;
+}
+
+#linkedin:hover{
+    color: #0e76a8;
+}
+
+#github:hover{
+    color: #000000;
+}
+
+#instagram:hover{
+    color: #ee2a7b;
 }
 
 
