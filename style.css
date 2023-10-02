@@ -24,6 +24,10 @@ body{
     background-color: #61677A;
 }
 
+.container a:hover{
+    text-decoration: underline;
+}
+
 .container-proyectos{
     padding: 25px 0;
     width: 100%;
@@ -59,7 +63,6 @@ footer{
 
 #iconos{
     margin: 0 auto;
-    border: #000000 1px solid;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -354,4 +357,10 @@ footer #iconos a{
 #grocery-list-erase:active {
 	position:relative;
 	top:1px;
+}
+
+/*Tip calculator Project 10*/
+#tip-amount{
+    display: none;
+    margin: 10px;
 }

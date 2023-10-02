@@ -125,3 +125,27 @@ function addItem() {
 
     groceryInput.value = ""
 }
+
+//Tip calculator
+const billAmount = document.getElementById("amount");
+const numberGuests = document.getElementById("guest")
+const quality = document.getElementById("quality")
+const tip_amount = document.getElementById("tip-amount")
+
+function calculate() {
+    const tip = ((billAmount.value * quality.value) / (numberGuests.value)).toFixed(2);
+
+    billAmount.value = ""
+    numberGuests.value = ""
+    quality.value = ""
+
+    if (tip === "NaN") {
+        tip_amount.innerHTML = `Tip $0 each`
+        tip_amount.style.display = "inline-block";
+        setTimeout(()=>{tip_amount.style.display = "none"},3000);
+    } else {
+        tip_amount.innerHTML = "The tip should be $" + tip + " each"
+        tip_amount.style.display = "inline-block";
+        setTimeout(()=>{tip_amount.style.display = "none"},3000);
+    }
+}
